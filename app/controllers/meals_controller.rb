@@ -1,5 +1,5 @@
 class MealsController < ApplicationController
-  def show
+  def index
   end
 
   def new
