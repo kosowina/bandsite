@@ -4,6 +4,6 @@ class StaticController < ApplicationController
 
   def contact
   end
-    def contact
+  def contact
   end
 end
