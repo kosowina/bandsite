@@ -12,6 +12,28 @@ Category.create!(name: "zupy")
 Category.create!(name: "desery")
 
 
+Tag.create!(name: "wegetariańskie")
+Tag.create!(name: "kurczak")
+Tag.create!(name: "kaczka")
+Tag.create!(name: "ryż")
+Tag.create!(name: "makaron")
+Tag.create!(name: "wołowina")
+Tag.create!(name: "wieprzowina")
+Tag.create!(name: "cielęcina")
+Tag.create!(name: "owoce morza")
+Tag.create!(name: "ryby")
+
+
+Table.create!(capacity: "4")
+Table.create!(capacity: "4")
+Table.create!(capacity: "4")
+Table.create!(capacity: "4")
+Table.create!(capacity: "4")
+Table.create!(capacity: "2")
+Table.create!(capacity: "2")
+Table.create!(capacity: "2")
+Table.create!(capacity: "2")
+
 
 
 
