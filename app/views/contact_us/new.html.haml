@@ -1,0 +1,7 @@
+= provide :title, "O Dong-A"
+%h1 Napisz do nas
+= form_for(:contact_us, url: contact_us_path) do |f|
+    = f.label :email
+    = f.email_field :email
+    = f.text_field :subject
+    = f.text_area :content
