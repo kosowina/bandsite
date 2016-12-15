@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   get '/contact', to: 'static#contact'
   #resources :reserve
   resources :meals
-  resources :contact_us only: [:new, :create]
+  resources :contact_us, only: [:new, :create]
   devise_for :users
 end
