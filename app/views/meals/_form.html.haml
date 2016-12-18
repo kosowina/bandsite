@@ -1,0 +1,11 @@
+= form_for(@meals) do |f|
+  %ul
+    - @meals.errors.full_messages.each do |error|
+      %li= error
+  = f.label :nazwa
+  = f.text_field :name
+  = f.label :cena
+  = f.number_field :price
+  = f.label :opis
+  = f.text_area :description, rows: 4
+  = f.submit "Zatwierdź"
