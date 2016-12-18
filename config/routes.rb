@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'contact_us/create'
 
   root 'static#about'
-  get '/contact', to: 'static#contact'
+  get '/info', to: 'static#info'
   #resources :reserve
   resources :meals
   resources :contact_us, only: [:new, :create]

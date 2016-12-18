@@ -1,2 +1,7 @@
 = provide :title, "Menu"
 %h1 Karta dań
+- if @meals.any?
+  %ul= render @meals
+- else
+  %p Brak dań
+= link_to "Dodaj danie", new_meal_path
