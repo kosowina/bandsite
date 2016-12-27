@@ -8,7 +8,7 @@
   = f.phone_field :phone
   = f.label "Adres email"
   = f.email_field :email
-  = f.collection_select(:table_id, Table.all, :id, :capacity, 
+  = f.collection_select(:table_id, Table.all, :id, :id, 
     {prompt: "Kategoria"})
   = f.select :hour, (9..18).to_a
   = f.submit "Rezerwuj"
