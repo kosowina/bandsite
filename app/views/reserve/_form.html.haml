@@ -1,0 +1,15 @@
+= form_for(@reservation) do |f|
+  %ul
+    - @reservations.errors.full_messages.each do |error|
+      %li= error
+  = f.label "Nazwisko"
+  = f.text_field :username
+  = f.label "Numer Telefonu"
+  = f.phone_field :phone
+  = f.label "Adres email"
+  = f.email_field :email
+  = f.collection_select(:table_id, Table.all, :id, :name, 
+    {prompt: "Kategoria"})
+  = f.collection_select(:time_table_id, TimeTable.all, :id, :name, 
+    {prompt: "Godzina"})
+  = f.submit "Rezerwuj"

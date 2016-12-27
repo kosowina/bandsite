@@ -1,9 +1,13 @@
 = provide :title, "Menu"
 %h1 Karta dań
 - if @meals.any?
-  = render @meals
+  - @meals.group_by(&:category_id).sort.each do |value, meals|
+    - @categories_names.each do |category|
+      - if category.id == value
+        = category.name
+        = content_tag :ul do
+          %ul= render meals
 - else
   %p Brak dań
 = link_to "Dodaj danie", new_meal_path
-= link_to "Usuń", meal_path(@meals), data: {confirm: "Really delete the article?"}
-= link_to "Edytuj", edit_meal_path(@meals)
+

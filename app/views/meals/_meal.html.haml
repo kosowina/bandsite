@@ -1,0 +1,6 @@
+%li
+  = meal.name
+  = meal.price
+  = meal.description
+  = link_to "Usuń", meal, method: :delete, data: {confirm: "Usunąć potrawę?"}
+  = link_to "Edytuj", edit_meal_path(meal)

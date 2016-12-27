@@ -1,0 +1,7 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  reservation_hour: 2016-12-27 12:26:51
+
+two:
+  reservation_hour: 2016-12-27 12:26:51

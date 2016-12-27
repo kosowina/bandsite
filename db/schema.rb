@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161215013903) do
+ActiveRecord::Schema.define(version: 20161227123250) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -45,10 +45,12 @@ ActiveRecord::Schema.define(version: 20161215013903) do
     t.integer  "phone"
     t.string   "username"
     t.string   "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.integer  "table_id"
+    t.integer  "time_table_id"
     t.index ["table_id"], name: "index_reservations_on_table_id"
+    t.index ["time_table_id"], name: "index_reservations_on_time_table_id"
   end
 
   create_table "tables", force: :cascade do |t|
@@ -61,6 +63,12 @@ ActiveRecord::Schema.define(version: 20161215013903) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "time_tables", force: :cascade do |t|
+    t.time     "reservation_hour"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "users", force: :cascade do |t|
