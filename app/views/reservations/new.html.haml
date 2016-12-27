@@ -1,0 +1,10 @@
+= provide :title, "Rezerwacja"
+%h1 Zarezerwuj stolik
+%p Rezerwacje możliwe są wyłącznie w dniu planowanej wizyty
+- Table.all.each do |table|
+  = "#{table.id} -> #{table.capacity}"
+  %br
+%h2 Dzisiejsze rezerwacje
+- @reservations.each do |reservation|
+  = reservation.table.id + reservation.date
+= render partial: 'form'
