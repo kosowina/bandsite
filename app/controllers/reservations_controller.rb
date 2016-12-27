@@ -11,7 +11,7 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.new(reservation_params)
     if @reservation.save
       flash.notice = "Dodano rezerwację na godzinę 
-                     #{@reservation.hour} dla stolika nr 
+                     #{@reservation.hour}:00 dla stolika nr 
                      #{@reservation.table.id}"
       redirect_to root_url
     else
