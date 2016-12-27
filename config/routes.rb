@@ -15,5 +15,6 @@ Rails.application.routes.draw do
   #resources :reserve
   resources :meals
   resources :contact_us, only: [:new, :create]
+  resources :reservations, only: [:new, :create]
   devise_for :users
 end
